@@ -76,3 +76,7 @@ model-viewer {
 p.small {
   font-size: 8px;
 }
+
+model-viewer::part(default-progress-bar) {
+  display: none;
+}
