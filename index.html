@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collective Space</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer@latest/dist/model-viewer.min.js"
+    ></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="inner">
+          <p>Å</p>
+        </div>
+      </section>
+      <section>
+        <model-viewer
+          id="viewer"
+          src="model.glb"
+          ar
+          field-of-view="40deg"
+          ar-modes="webxr scene-viewer quick-look"
+          auto-rotate
+          camera-controls
+          environment-image="legacy"
+          exposure="0.8"
+          shadow-intensity="1"
+          interaction-prompt="none"
+          shadow-softness="0.5"
+          contrast="1.2"
+          disable-zoom
+        ></model-viewer>
+      </section>
 
+      <section>
+        <img
+          src="top.svg"
+          title="Åsögatan 122 top view"
+          alt="Åsögatan 122 top view"
+        />
+      </section>
+
+      <section>
+        <img
+          src="north.svg"
+          title="Åsögatan 122"
+          alt="Åsögatan 122 north view"
+        />
+      </section>
+
+      <section>
+        <img
+          src="south.svg"
+          title="Åsögatan 122"
+          alt="Åsögatan 122 south view"
+        />
+      </section>
+      <section>
+        <img
+          src="west.svg"
+          title="Åsögatan 122 west view"
+          alt="Åsögatan 122 west view"
+        />
+      </section>
+      <section>
+        <img
+          src="east.svg"
+          title="Åsögatan 122 east view"
+          alt="Åsögatan 122 east view"
+        />
+      </section>
+      <section>
+        <div class="inner">
+          <p>Ö</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

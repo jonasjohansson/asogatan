@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Area";
+  src: url("Area-Light.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Area", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+ul,
+li {
+  font-size: inherit;
+  list-style: none;
+}
+main {
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 10vw 0;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+}
+section {
+  box-sizing: border-box;
+}
+section > * {
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.inner {
+  padding: 0 20vw;
+}
+.inner > *:not(:last-child) {
+  padding-bottom: 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+p {
+  font-size: inherit;
+}
+img {
+  mix-blend-mode: overlay;
+}
+img,
+model-viewer {
+  width: 100%;
+  height: 56.2cqw;
+  overflow: visible;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+:not(:defined) > * {
+  display: none;
+}
+
+p.small {
+  font-size: 8px;
+}
