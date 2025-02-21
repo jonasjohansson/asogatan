@@ -63,6 +63,8 @@ img,
 model-viewer {
   width: 100%;
   height: 56.2cqw;
+  object-fit: contain;
+  object-position: center center;
 }
 
 ::-webkit-scrollbar {
