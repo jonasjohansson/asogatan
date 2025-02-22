@@ -1,3 +1,16 @@
+:root {
+  --font-family: "Inter", serif;
+  --font-weight: 100;
+  --font-size-base: clamp(12px, 2.4vw, 48px);
+  --line-height: 1.4;
+  --color-background: rgb(85, 143, 81);
+  --color-text: white;
+  --padding-main: 10vw;
+  --padding-inner: 20vw;
+  --transition-duration: 500ms;
+  --transition-ease: ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,24 +23,24 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100dvh; /* Modern fix for dynamic viewport height */
-  min-height: 100svh; /* Small viewport height (adjusts dynamically) */
+  height: 100dvh;
+  min-height: 100svh;
 }
 
 body {
-  font-family: "Inter", serif;
+  font-family: var(--font-family);
   font-optical-sizing: auto;
-  font-weight: 100;
-  font-size: clamp(12px, 2.4vw, 48px);
-  line-height: 1.4;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
   overflow: hidden;
-  background-color: orange;
+  background-color: var(--color-background);
 }
 
 main {
   height: 100vh;
   min-height: 100svh;
-  padding: 10vw 0;
+  padding: var(--padding-main) 0;
   overflow-y: auto;
   text-align: center;
   mix-blend-mode: color-burn;
@@ -44,17 +57,17 @@ section {
 }
 
 section:not(:last-of-type) {
-  padding-bottom: 10vw;
+  padding-bottom: var(--padding-main);
 }
 
 section > * {
   margin: 0 auto;
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity var(--transition-duration) var(--transition-ease);
 }
 
 .inner {
-  padding: 0 20vw;
+  padding: 0 var(--padding-inner);
 }
 
 .inner > *:not(:last-child) {
@@ -71,7 +84,10 @@ h6 {
   font-size: inherit;
 }
 
-img {
+p,
+img,
+model-viewer {
+  background-color: var(--color-text);
 }
 
 img,
@@ -79,7 +95,6 @@ model-viewer {
   width: 100%;
   object-fit: contain;
   object-position: center center;
-  background-color: white;
 }
 
 model-viewer {
