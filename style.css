@@ -11,6 +11,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100dvh; /* Modern fix for dynamic viewport height */
+  min-height: 100svh; /* Small viewport height (adjusts dynamically) */
 }
 
 body {
@@ -25,6 +26,7 @@ body {
 
 main {
   height: 100vh;
+  min-height: 100svh;
   padding: 10vw 0;
   overflow-y: auto;
   text-align: center;
@@ -38,6 +40,7 @@ li {
 
 section {
   box-sizing: border-box;
+  mix-blend-mode: color-burn;
 }
 
 section:not(:last-of-type) {
@@ -76,6 +79,7 @@ model-viewer {
   width: 100%;
   object-fit: contain;
   object-position: center center;
+  background-color: white;
 }
 
 model-viewer {
