@@ -7,3 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, index * 300); // Adjust delay based on iteration
   });
 });
+function setViewportHeight() {
+  document.documentElement.style.setProperty(
+    "--vh",
+    `${window.innerHeight * 0.01}px`
+  );
+}
+
+window.addEventListener("resize", setViewportHeight);
+window.addEventListener("orientationchange", setViewportHeight);
+setViewportHeight();

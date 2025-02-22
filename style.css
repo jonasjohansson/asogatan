@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100dvh; /* Modern fix for dynamic viewport height */
+}
+
 body {
   font-family: "Inter", serif;
   font-optical-sizing: auto;
@@ -12,11 +20,6 @@ body {
   font-size: clamp(12px, 2.4vw, 48px);
   line-height: 1.4;
   overflow: hidden;
-}
-
-ul,
-li {
-  list-style: none;
 }
 
 main {
@@ -27,8 +30,17 @@ main {
   text-align: center;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 section {
   box-sizing: border-box;
+}
+
+section:not(:last-of-type) {
+  padding-bottom: 10vw;
 }
 
 section > * {
@@ -62,9 +74,12 @@ img {
 img,
 model-viewer {
   width: 100%;
-  height: 56.2cqw;
   object-fit: contain;
   object-position: center center;
+}
+
+model-viewer {
+  height: 56.2cqw;
 }
 
 ::-webkit-scrollbar {
