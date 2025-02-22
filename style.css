@@ -20,14 +20,15 @@ body {
   font-size: clamp(12px, 2.4vw, 48px);
   line-height: 1.4;
   overflow: hidden;
+  background-color: orange;
 }
 
 main {
   height: 100vh;
   padding: 10vw 0;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   text-align: center;
+  mix-blend-mode: color-burn;
 }
 
 ul,
@@ -68,7 +69,6 @@ h6 {
 }
 
 img {
-  mix-blend-mode: overlay;
 }
 
 img,
